@@ -1,0 +1,37 @@
+# .github/workflows/workflow-pr.yml
+name: Workflow Pull Request
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  job1-pr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Checking PR metadata"
+
+  job2-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Linting PR changes"
+
+  job3-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running PR unit tests"
+
+  job4-diff-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Checking code differences"
+
+  job5-preview-build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building PR preview"
+
+  job6-pr-approval-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Verifying PR reviewers"
