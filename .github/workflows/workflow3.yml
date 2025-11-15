@@ -1,0 +1,46 @@
+# .github/workflows/workflow-manual.yml
+name: Workflow Manual Trigger
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1-start:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Manual workflow started"
+
+  job2-check-env:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Checking environment"
+
+  job3-fetch-config:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Fetching configurations"
+
+  job4-build-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building assets"
+
+  job5-run-diagnostics:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running diagnostics"
+
+  job6-clean-up:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Cleaning temporary files"
+
+  job7-summary:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Preparing summary"
+
+  job8-finish:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Manual workflow finished successfully"
