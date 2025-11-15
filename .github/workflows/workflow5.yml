@@ -1,0 +1,32 @@
+# .github/workflows/workflow-cron.yml
+name: Workflow Scheduled Nightly
+
+on:
+  schedule:
+    - cron: "0 2 * * *"   # runs every night at 2 AM UTC
+
+jobs:
+  job1-start:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Starting nightly job"
+
+  job2-backup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Creating backups"
+
+  job3-clean:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Cleaning old artifacts"
+
+  job4-health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Performing system health check"
+
+  job5-report:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Generating nightly report"
