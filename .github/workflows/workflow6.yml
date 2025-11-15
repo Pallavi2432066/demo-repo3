@@ -1,0 +1,33 @@
+# .github/workflows/workflow-tag.yml
+name: Workflow Tag Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  job1-start:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Tag detected"
+
+  job2-build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building release"
+
+  job3-generate-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Generating release artifacts"
+
+  job4-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Publishing release"
+
+  job5-complete:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Release process complete"
