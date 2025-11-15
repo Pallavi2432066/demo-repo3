@@ -1,0 +1,42 @@
+# .github/workflows/workflow-main.yml
+name: Workflow Main Branch Only
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  job1-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Setup on main"
+
+  job2-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Linting code on main"
+
+  job3-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running unit tests"
+
+  job4-build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building project"
+
+  job5-security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Security scan complete"
+
+  job6-package:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Packaging artifacts"
+
+  job7-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying main branch build"
